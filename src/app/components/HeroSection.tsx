@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function HeroSection() {
   const [typed, setTyped] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
   const word = "CONTENT";
 
   useEffect(() => {
@@ -13,8 +14,9 @@ export default function HeroSection() {
         i++;
       } else {
         clearInterval(interval);
+        setTimeout(() => setShowCursor(false), 2000);
       }
-    }, 200);
+    }, 180);
     return () => clearInterval(interval);
   }, []);
 
@@ -37,16 +39,22 @@ export default function HeroSection() {
       <div className="hero-content">
         <h1>
           <span className="typed-text">{typed}</span>
-          <span className="typed-cursor">|</span>
+          {showCursor && <span className="typed-cursor">|</span>}
           <br />
           madebymee.
         </h1>
-        <p>
+        <p className="hero-sub">
           Performance Ads, Social Media Content und Videoproduktion — alles aus einer Hand.
+          Datengetrieben. Kreativ. Messbar.
         </p>
-        <a href="#kontakt" className="btn-primary-custom">
-          <i className="bi bi-telephone" /> Termin buchen
-        </a>
+        <div className="hero-buttons">
+          <a href="#referenzen" className="btn-primary-custom">
+            <i className="bi bi-play-circle" /> Unsere Produktionen
+          </a>
+          <a href="#kontakt" className="btn-outline-light btn-outline-custom">
+            <i className="bi bi-telephone" /> Termin buchen
+          </a>
+        </div>
       </div>
       <div className="hero-scroll">
         <span>Scroll</span>

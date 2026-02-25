@@ -44,9 +44,9 @@ function AnimatedNumber({ target, suffix }: { target: number; suffix: string }) 
 }
 
 const stats = [
-  { number: 50, suffix: "+", label: "Produktionen" },
-  { number: 14, suffix: "+", label: "Kunden" },
-  { number: 2, suffix: "M+", label: "Views generiert" },
+  { number: 50, suffix: "+", label: "Produktionen", icon: "bi-camera-reels" },
+  { number: 14, suffix: "+", label: "Kunden", icon: "bi-building" },
+  { number: 2, suffix: "M+", label: "Views generiert", icon: "bi-eye" },
 ];
 
 export default function StatsBar() {
@@ -57,6 +57,7 @@ export default function StatsBar() {
           {stats.map((s, i) => (
             <div key={i} className="col-md-4">
               <div className="stat-item">
+                <div className="stat-icon"><i className={`bi ${s.icon}`} /></div>
                 <AnimatedNumber target={s.number} suffix={s.suffix} />
                 <div className="stat-label">{s.label}</div>
               </div>

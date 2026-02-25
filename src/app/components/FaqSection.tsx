@@ -3,20 +3,20 @@ import { useScrollAnimation } from "./useScrollAnimation";
 
 const faqs = [
   {
-    q: "Funktioniert das auch für unseren Betrieb — egal ob Industrie, Handwerk oder Dienstleistung?",
-    a: "Ja. Entscheidend ist nicht eure Branche, sondern, wen ihr erreichen wollt — und die sind heute am Smartphone. Wir schauen uns euren Betrieb, eure Zielgruppe und eure Stärken an und übersetzen das in Content, der zu euch passt, nicht zu irgendeinem Trend.",
+    q: "Funktioniert das auch f\u00FCr unseren Betrieb \u2014 egal ob Industrie, Handwerk oder Dienstleistung?",
+    a: "Ja. Entscheidend ist nicht eure Branche, sondern, wen ihr erreichen wollt \u2014 und die sind heute am Smartphone. Wir schauen uns euren Betrieb, eure Zielgruppe und eure St\u00E4rken an und \u00FCbersetzen das in Content, der zu euch passt, nicht zu irgendeinem Trend.",
   },
   {
-    q: "Wie viel Zeit benötige ich für die Zusammenarbeit?",
-    a: "Von deiner Seite benötigen wir: ein fokussiertes Erstgespräch, ein bis drei Drehtage — an denen du nicht anwesend sein musst, und final eine Freigabe. Das heißt: möglichst wenig Aufwand für dich, maximale Wirkung für euren Auftritt!",
+    q: "Wie viel Zeit ben\u00F6tige ich f\u00FCr die Zusammenarbeit?",
+    a: "Von deiner Seite ben\u00F6tigen wir: ein fokussiertes Erstgespr\u00E4ch, ein bis drei Drehtage \u2014 an denen du nicht anwesend sein musst, und final eine Freigabe. Das hei\u00DFt: m\u00F6glichst wenig Aufwand f\u00FCr dich, maximale Wirkung f\u00FCr euren Auftritt!",
   },
   {
-    q: "Können wir mit euren Videos und Kampagnen wirklich messbar mehr Bewerbungen oder Anfragen erzielen?",
+    q: "K\u00F6nnen wir mit euren Videos und Kampagnen wirklich messbar mehr Bewerbungen oder Anfragen erzielen?",
     a: "Wir versprechen keine Fantasie-Zahlen, sondern bringen deine Chancen auf ein Maximum. Mit gutem Content und passenden Kampagnen steigern wir eure Sichtbarkeit bei den richtigen Menschen und sehen in den Zahlen, was passiert: Reichweite, Klicks, Bewerbungen und Anfragen.",
   },
   {
-    q: "Wie läuft die Zusammenarbeit mit euch ab?",
-    a: "Erstgespräch → Konzept & Planung → Produktion → Postproduktion & Abliefern → Feedback → Optional laufende Betreuung. Wir halten euch in jedem Schritt auf dem Laufenden und arbeiten transparent.",
+    q: "Wie l\u00E4uft die Zusammenarbeit mit euch ab?",
+    a: "Erstgespr\u00E4ch \u2192 Konzept & Planung \u2192 Produktion \u2192 Postproduktion & Abliefern \u2192 Feedback \u2192 Optional laufende Betreuung. Wir halten euch in jedem Schritt auf dem Laufenden und arbeiten transparent.",
   },
 ];
 
@@ -27,8 +27,8 @@ export default function FaqSection() {
     <section className="faq-section" ref={ref}>
       <div className="container-custom">
         <div className="text-center mb-5">
-          <h2 className="fade-up">FAQ</h2>
-          <p className="section-subtitle fade-up stagger-1">Häufig gestellte Fragen.</p>
+          <span className="section-label fade-up">H\u00E4ufige Fragen</span>
+          <h2 className="fade-up stagger-1">FAQ</h2>
         </div>
         <div className="row justify-content-center">
           <div className="col-lg-8">

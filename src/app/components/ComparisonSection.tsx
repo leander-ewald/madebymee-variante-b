@@ -12,10 +12,10 @@ const features = [
 ];
 
 function Check() {
-  return <span className="check"><i className="bi bi-check-lg" /></span>;
+  return <span className="check"><i className="bi bi-check-circle-fill" /></span>;
 }
 function Cross() {
-  return <span className="cross"><i className="bi bi-x-lg" /></span>;
+  return <span className="cross"><i className="bi bi-dash" /></span>;
 }
 
 export default function ComparisonSection() {
@@ -25,34 +25,37 @@ export default function ComparisonSection() {
     <section className="comparison-section dark-section" ref={ref}>
       <div className="container-custom">
         <div className="text-center mb-5">
-          <h2 className="fade-up">WARUM. <span className="accent">madebymee.</span></h2>
-          <p className="section-subtitle fade-up stagger-1">
+          <span className="section-label fade-up">Der Vergleich</span>
+          <h2 className="fade-up stagger-1">WARUM. <span className="accent">madebymee.</span></h2>
+          <p className="section-subtitle fade-up stagger-2">
             Der direkte Vergleich zeigt den Unterschied.
           </p>
         </div>
-        <div className="table-responsive fade-up stagger-2">
-          <table className="comparison-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th className="active-col">madebymee</th>
-                <th>Freelancer</th>
-                <th>In-House</th>
-                <th>Stock Content</th>
-              </tr>
-            </thead>
-            <tbody>
-              {features.map((f, i) => (
-                <tr key={i}>
-                  <td>{f.label}</td>
-                  <td>{f.mbm ? <Check /> : <Cross />}</td>
-                  <td>{f.free ? <Check /> : <Cross />}</td>
-                  <td>{f.house ? <Check /> : <Cross />}</td>
-                  <td>{f.stock ? <Check /> : <Cross />}</td>
+        <div className="comparison-table-wrapper fade-up stagger-3">
+          <div className="table-responsive">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th className="active-col">madebymee</th>
+                  <th>Freelancer</th>
+                  <th>In-House</th>
+                  <th>Stock Content</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {features.map((f, i) => (
+                  <tr key={i}>
+                    <td>{f.label}</td>
+                    <td className="active-col-td">{f.mbm ? <Check /> : <Cross />}</td>
+                    <td>{f.free ? <Check /> : <Cross />}</td>
+                    <td>{f.house ? <Check /> : <Cross />}</td>
+                    <td>{f.stock ? <Check /> : <Cross />}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>

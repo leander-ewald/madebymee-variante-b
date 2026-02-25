@@ -12,17 +12,20 @@ export default function ClientsSection() {
 
   return (
     <section className="clients-section">
-      <div className="clients-track">
-        {doubled.map((logo, i) => (
-          <Image
-            key={i}
-            src={`/client-logos/${logo}`}
-            alt={logo.replace(/\.svg$/, "").replace(/-/g, " ")}
-            width={120}
-            height={32}
-            style={{ height: 32, width: "auto" }}
-          />
-        ))}
+      <div className="clients-label">Marktführende Brands vertrauen auf uns</div>
+      <div className="clients-track-wrapper">
+        <div className="clients-track">
+          {doubled.map((logo, i) => (
+            <Image
+              key={i}
+              src={`/client-logos/${logo}`}
+              alt={logo.replace(/\.svg$/, "").replace(/-/g, " ")}
+              width={120}
+              height={28}
+              style={{ height: 28, width: "auto" }}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
